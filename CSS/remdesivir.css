@@ -58,7 +58,7 @@
     background-color: #327acd;
     color: white;
     border: 1px solid white;
-    width: 15%;
+    width: 20%;
 }
 .submitButton:hover{
     border: 2px solid black;
@@ -80,7 +80,7 @@ th{
     border-radius: 0.5em;
     padding: 5px;
     height: 35px;
-    width: 15%;
+    width: 30%;
     border: 1px solid black;
 
 }
@@ -88,15 +88,16 @@ th{
     border-radius: 0.5em;
     padding: 5px;
     height: 35px;
-    width: 15%;
+    width: 30%;
     border: 1px solid black;
 
 }
 .filter-container button{
     border-radius: 0.5em;
-    width: 15%;
+    width: 30%;
     padding: 5px;
     height: 35px;
+    margin-top: 10px ;
     background-color: #e6f4f1;
     border: 1px solid black;
 
@@ -105,3 +106,66 @@ th{
     background-color: #327acd;
     color: white;
 }
+
+@media (min-width:500px) and (max-width: 619px) {
+    .submitButton{
+        width: 25%;
+    }
+}
+@media (max-width:500px) {
+    .submitButton{
+        width: 50%;
+    }
+}
+
+
+/* media query for responsive table */
+	@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+		table, thead, tbody, th, td, tr {
+			display: block;
+		}
+
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+        tr {
+            margin: 0 0 1rem 0;
+        }
+      
+        tr:nth-child(odd) {
+            background: #ccc;
+        }
+    
+		td {
+            box-sizing: border-box;
+			border: none;
+			border-bottom: 1px solid #eee !important;
+			position: relative;
+			padding-left: 50% !important;
+		}
+
+		td:before {
+			position: absolute;
+			top: 0;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+			white-space: nowrap;
+		}
+
+		
+		td:nth-of-type(1):before { content: "Pincode: "; }
+		td:nth-of-type(2):before { content: "State:"; }
+		td:nth-of-type(3):before { content: "City"; }
+		td:nth-of-type(4):before { content: "Distributor's Name:"; }
+		td:nth-of-type(5):before { content: "Address:"; }
+		td:nth-of-type(6):before { content: "E-mail Address:"; }
+		td:nth-of-type(7):before { content: "Contact Number:"; }
+        
+	}
