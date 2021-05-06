@@ -70,7 +70,7 @@ nav{
 }
 @media screen and (width: 2560px){
   .nav-links{
-     margin-left: 62vw ;
+     margin-left: 55vw ;
   }
   .fade{
      opacity: 1 !important;
@@ -78,7 +78,7 @@ nav{
 }
 @media (min-width:1440px) and (max-width:2559px){
   .nav-links{
-     margin-left: 41vw ;
+     margin-left: 27vw ;
   }
   .fade{
      opacity: 1 !important;
@@ -86,7 +86,7 @@ nav{
 }
 @media (min-width:1320px) and (max-width:1439px){
   .nav-links{
-     margin-left: 35vw;
+     margin-left: 25vw;
   }
   .fade{
      opacity: 1 !important;
@@ -94,21 +94,15 @@ nav{
 }
 @media (min-width:1024px) and (max-width: 1319px){
   .nav-links{
-     margin-left: 30vw;
+     margin-left: 20vw;
+     margin-right: 2vw;
   }
   .fade{
      opacity: 1 !important;
   }
 }
-@media (min-width:769px) and (max-width: 1023px){
-  .nav-links{
-     margin-left: 30vw;
-  }
-  .fade{
-     opacity: 1 !important;
-  }
-}
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 1024px){
   nav{
       position: fixed;
   }
