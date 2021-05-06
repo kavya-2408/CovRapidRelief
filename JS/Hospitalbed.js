@@ -8,12 +8,12 @@ xmlhttp.onreadystatechange = function () {
       let pincode = data[i]["gsx$pincode"]["$t"];
       let state = data[i]["gsx$state"]["$t"];
       let city = data[i]["gsx$city"]["$t"];
-      let distributorName = data[i]["gsx$distributorname"]["$t"];
-      let address = data[i]["gsx$address"]["$t"];
-      let email = data[i]["gsx$e-mailaddress"]["$t"];
-      let phone = data[i]["gsx$telephone"]["$t"];
-      let remarks = data[i]["gsx$remarks"]["$t"];
-      let bloodgroup = data[i]["gsx$bloodgroup"]["$t"];
+      let hospitalname = data[i]["gsx$hospitalname"]["$t"];
+      let type = data[i]["gsx$type"]["$t"];
+      let lastupdatedat = data[i]["gsx$lastupdatedat"]["$t"];
+      let total = data[i]["gsx$total"]["$t"];
+      let occupied = data[i]["gsx$occupied"]["$t"];
+      let vacant = data[i]["gsx$vacant"]["$t"];
 
       document.getElementById("remdesivir-data").innerHTML +=
         "<tr>" +
@@ -27,22 +27,22 @@ xmlhttp.onreadystatechange = function () {
         city +
         "</td>" +
         "<td>" +
-        distributorName +
+        hospitalname +
         "</td>" +
         "<td>" +
-        address +
+        type +
         "</td>" +
         "<td>" +
-        email +
+        lastupdatedat +
         "</td>" +
         "<td>" +
-        "<a>" + phone +"</a>" +
+        total +
         "</td>" +
         "<td>" +
-        remarks +
+        occupied +
         "</td>" +
         "<td>" +
-        bloodgroup +
+        vacant +
         "</td>" +
         "</tr>";
     }
@@ -51,7 +51,7 @@ xmlhttp.onreadystatechange = function () {
 
 xmlhttp.open(
   "GET",
-  "https://spreadsheets.google.com/feeds/list/16eDYNEXFcd3cBUIUgJNpci1-u2KjoAUPqZkuq7JQz50/2/public/values?alt=json",
+  "https://spreadsheets.google.com/feeds/list/16eDYNEXFcd3cBUIUgJNpci1-u2KjoAUPqZkuq7JQz50/7/public/values?alt=json",
   true
 );
 xmlhttp.send();

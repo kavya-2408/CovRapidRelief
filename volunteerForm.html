@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CovRapidRelief</title>
+
+    <!--bootstrap calls-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <!--custom css-->
+    <link rel="stylesheet" href="/CSS/form.css">
+
+    <!--calling navbar-->
+    <script>
+        $(function(){
+            
+            $( "#navbar" ).load( "./components/nav.html",function(){
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--navbar-->
+    <div id="navbar">
+
+    </div>
+    <!--volunteer form-->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted){window.location='thankyou.html';}"></iframe>
+    <div class="container form-container">
+        <form action='https://docs.google.com/forms/d/e/1FAIpQLSeKjNVjRv_UG2WrtkNGmbczq6aqUBL3d_IO2H9rpnmSl27_8w/formResponse' method="post" target="hidden_iframe" onsubmit="submitted= true;">
+            <table class="form-table">
+                <tr>
+                    <td class="field"><label for="name">Name</label></td>
+                    <td><input type="text" name="entry.1095332275" id="name"></td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="age">Age</label></td>
+                    <td><input type="number" name="entry.896389336" id="age"></td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="email">E-mail Address</label></td>
+                    <td><input type="email" name="entry.186501308" id="email"></td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="phone no.">Contact Number</label></td>
+                    <td><input type="number" name="entry.252709895" id="phone"></td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="city">City</label></td>
+                    <td><input type="text" name="entry.1453289612" id="city"></td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="state">State</label></td>
+                    <td><input type="text" name="entry.1438093145" id="state"></td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="time">How many hours per day you can spare for this?</label></td>
+                    <td><input type="number" name="entry.482617879" id="time"></td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="work">How can you help in arranging donors?</label></td>
+                    <td><textarea name="entry.1619989301" id="work"  rows="3"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="id proof">Please provide your address proof</label></td>
+                    <td><input type="file" name="" id=""></td>
+                </tr>
+                <tr>
+                    td
+                </tr>
+            </table>
+        </form>
+    </div>
+    
+
+</body>
+</html>

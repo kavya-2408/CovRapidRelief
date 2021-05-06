@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
     <!--custom css-->
-    <link rel="stylesheet" href="/CSS/remdesivir.css">
+    <link rel="stylesheet" href="/CSS/HospitalBeds.css">
 
     <!--calling navbar-->
     <script>
@@ -30,9 +30,8 @@
     </div>
     <!--link for leads form-->
     <div class="container form-container">
-        <h4 class="remdisivirHeading ">If you are a donor, 
-            <span><input type="submit" name="submit" class="submitButton" value="Click here" onclick="document.location='DonorForm.html'" />
-            </span>
+        <h4 class="remdisivirHeading ">List of ICU Covid beds 
+            
         </h4>
         
         
@@ -93,12 +92,12 @@
                 <th>Pincode</th>
                 <th>State</th>
                 <th>City</th>
-                <th>Distributor's Name</th>
-                <th>Address</th>
-                <th>E-mail Address</th>
-                <th>Contact Number</th>
-                <th>Remarks</th>
-                <th>Blood Group</th>
+                <th>Hospital Name</th>
+                <th>Type</th>
+                <th>Last Updated At</th>
+                <th>Total</th>
+                <th>Occupied</th>
+                <th>Vacant</th>
              </tr>
             </thead>
             <tbody id="remdesivir-data"></tbody>
@@ -107,7 +106,7 @@
 
 
     <!--calling script to get data-->
-    <script src="./JS/Donor.js"></script>
+    <script src="./JS/Hospitalbed.js"></script>
     <!--calling filter script-->
     <script src="/JS/remdesivirFilter.js"></script>
 

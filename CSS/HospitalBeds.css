@@ -12,6 +12,44 @@
 .remdisivirHeading{
     font-weight: 700;
 }
+.form-table{
+    width: 100%;
+    font-family: 'RocknRoll One', sans-serif;
+}
+.form-table td{
+    height: 15px;
+    width: 60%;
+    padding-bottom: 15px;
+    text-align: left;
+    vertical-align: top;
+}
+.form-table .field{
+    width: 20%;
+}
+.form-table td input{
+    border: 0.5px;
+    border-radius: 0.5em;
+    padding: 5px;
+    height: 35px;
+    width: 90%;
+    margin-left: 10%;
+}
+.form-table td select{
+    border: 0.5px;
+    border-radius: 0.5em;
+    padding: 5px;
+    height: 35px;
+    width: 90%;
+    margin-left: 10%;
+}
+.form-table td textarea{
+    border: 0.5px;
+    border-radius: 0.5em;
+    padding: 5px;
+    height: 70px;
+    width: 90%;
+    margin-left: 10%;
+}
 .submitButton{
     margin: 15px;
     height: 40px;
@@ -130,11 +168,11 @@ th{
 		td:nth-of-type(1):before { content: "Pincode: "; }
 		td:nth-of-type(2):before { content: "State:"; }
 		td:nth-of-type(3):before { content: "City"; }
-		td:nth-of-type(4):before { content: "Distributor's Name:"; }
-		td:nth-of-type(5):before { content: "Address:"; }
-		td:nth-of-type(6):before { content: "E-mail Address:"; }
-		td:nth-of-type(7):before { content: "Contact Number:"; }
-        td:nth-of-type(8):before { content: "Remarks:"; }
-        td:nth-of-type(9):before { content: "Blood Group:"; }
+		td:nth-of-type(4):before { content: "Hospital Name:"; }
+		td:nth-of-type(5):before { content: "Type:"; }
+		td:nth-of-type(6):before { content: "Last Updated At:"; }
+		td:nth-of-type(7):before { content: "Total:"; }
+        td:nth-of-type(8):before { content: "Occupied:"; }
+        td:nth-of-type(9):before { content: "Vacant:"; }
         
 	}
