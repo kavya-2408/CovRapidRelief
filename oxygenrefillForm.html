@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CovRapidRelief</title>
+
+    <!--bootstrap calls-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <!--custom css-->
+    <link rel="stylesheet" href="/CSS/form.css">
+
+    <!--calling navbar-->
+    <script>
+        $(function(){
+            
+            $( "#navbar" ).load( "./components/nav.html",function(){
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--navbar-->
+    <div id="navbar">
+
+    </div>
+    <!--remdevisir lead form-->
+    <div class="container form-container">
+        <form autocomplete="off" name="oxygenRefill-form" method="post" class="oxygenRefill-form">
+            <table class="form-table">
+                <tr>
+                    <td class="field"><label for="pincode">Pincode</label></td>
+                    <td><input type="text" name="Pincode" placeholder="Please enter pincode:"></td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="state">State</label></td>
+                    <td>
+                        <select name="State" id="state">
+                            <option value="">Please select your state:</option>
+                            <option value="Andaman & Nicobar Islands">Andaman & Nicobar Islands</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Chhaattisgarh">Chhaattisgarh</option>
+                            <option value="Dadra und Nagar Hav.">Dadra und Nagar Hav.</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jammu und Kashmir">Jammu und Kashmir</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Ladakh">Ladakh</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Orissa">Orissa</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Puducherry">Puducherry</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="state">City</label></td>
+                    <td><input type="text" name="City" placeholder="Please enter city:"></td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="state">Distributor's Name</label></td>
+                    <td><input type="text" name="Distributor Name" placeholder="Please enter Distributor's name:"></td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="state">Address</label></td>
+                    <td><textarea name="Address" rows="2" placeholder="Please enter Distributor's address:"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="state">E-mail Address</label></td>
+                    <td><input type="email" name="E-Mail Address" placeholder="Please enter Distributor's email:"></td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="state">Contact Number</label></td>
+                    <td><input type="tel" name="Telephone" placeholder="Please enter Distributor's contact number:"></td>
+                </tr>
+                <tr>
+                    <td class="field"><label for="remarks">Remarks</label></td>
+                    <td><input type="text" name="REMARKS" placeholder="Leave special remarks (if any):"></td>
+                </tr>
+            </table>
+            <input type="submit" name="submit" class="submitButton button2" value="Submit" />
+        
+        </form>
+    </div>
+
+    <!--script to transfer data  from form to google sheet-->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby-fPJzpkd17q--HX0-27G_j8Vn3aQyiKpn7h1336-hyH4zvdkHtqnG_g7Oovw7ULzokQ/exec'
+        const form = document.forms['oxygenRefill-form']
+      
+        form.addEventListener('submit', e => {
+            
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thank You !!"))
+            .catch(error => console.error('Error!', error.message))
+            document.oxygenRefill-form.reset();
+        }
+        );
+    </script>
+    
+</body>
+</html>

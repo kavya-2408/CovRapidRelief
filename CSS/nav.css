@@ -133,7 +133,15 @@ nav{
       margin-left: 0;
   }
   .nav-links li:hover{
-     background-color:  #21282b ;
+    background-color: #f4f9ff;
+    border: 1px solid black;
+    margin-left: 5px;
+    color: #000;
+  }
+  .nav-links li:hover > a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
   }
   .nav-links.open{
       clip-path: circle(1000px at 90% -10%);
