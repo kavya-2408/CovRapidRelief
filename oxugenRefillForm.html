@@ -30,7 +30,7 @@
     </div>
     <!--remdevisir lead form-->
     <div class="container form-container">
-        <form autocomplete="off" name="remdesivir-form" method="post" class="remdesivir-form">
+        <form autocomplete="off" name="oxygenRefill-form" method="post" class="oxygenRefill-form">
             <table class="form-table">
                 <tr>
                     <td class="field"><label for="pincode">Pincode</label></td>
@@ -100,6 +100,10 @@
                     <td class="field"><label for="state">Contact Number</label></td>
                     <td><input type="tel" name="Telephone" placeholder="Please enter Distributor's contact number:"></td>
                 </tr>
+                <tr>
+                    <td class="field"><label for="remarks">Remarks</label></td>
+                    <td><input type="text" name="REMARKS" placeholder="Leave special remarks (if any):"></td>
+                </tr>
             </table>
             <input type="submit" name="submit" class="submitButton button2" value="Submit" />
         
@@ -108,8 +112,8 @@
 
     <!--script to transfer data  from form to google sheet-->
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxLPBnEJM8ZngpRIZCuuf2Z3EkqCn0BrJ-xBR2rcjDVOnoYte2MWAd3OYBHNhwxIgiERw/exec'
-        const form = document.forms['remdesivir-form']
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby-fPJzpkd17q--HX0-27G_j8Vn3aQyiKpn7h1336-hyH4zvdkHtqnG_g7Oovw7ULzokQ/exec'
+        const form = document.forms['oxygenRefill-form']
       
         form.addEventListener('submit', e => {
             
@@ -117,7 +121,7 @@
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => alert("Thank You !!"))
             .catch(error => console.error('Error!', error.message))
-            document.remdesivir-form.reset();
+            document.oxygenRefill-form.reset();
         }
         );
     </script>
