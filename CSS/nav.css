@@ -21,6 +21,7 @@ nav{
 }
 .logo img{
   height: 8rem;
+  margin-top: 10px;
 }
 .nav-links{
   display: flex;
@@ -78,7 +79,7 @@ nav{
 }
 @media (min-width:1440px) and (max-width:2559px){
   .nav-links{
-     margin-left: 27vw ;
+     margin-left: 10vw ;
   }
   .fade{
      opacity: 1 !important;

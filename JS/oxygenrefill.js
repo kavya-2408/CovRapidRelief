@@ -12,6 +12,7 @@ xmlhttp.onreadystatechange = function () {
       let address = data[i]["gsx$address"]["$t"];
       let email = data[i]["gsx$e-mailaddress"]["$t"];
       let phone = data[i]["gsx$telephone"]["$t"];
+      let remarks = data[i]["gsx$remarks"]["$t"];
 
       document.getElementById("remdesivir-data").innerHTML +=
         "<tr>" +
@@ -36,6 +37,9 @@ xmlhttp.onreadystatechange = function () {
         "<td>" +
         "<a>" + phone +"</a>" +
         "</td>" +
+        "<td>" +
+        remarks +
+        "</td>" +
         "</tr>";
     }
   }
@@ -43,7 +47,7 @@ xmlhttp.onreadystatechange = function () {
 
 xmlhttp.open(
   "GET",
-  "https://spreadsheets.google.com/feeds/cells/16eDYNEXFcd3cBUIUgJNpci1-u2KjoAUPqZkuq7JQz50/od6/public/values?alt=json",
+  "https://spreadsheets.google.com/feeds/list/16eDYNEXFcd3cBUIUgJNpci1-u2KjoAUPqZkuq7JQz50/5/public/values?alt=json",
   true
 );
 xmlhttp.send();
