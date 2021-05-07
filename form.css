@@ -1,0 +1,58 @@
+.form-container{
+    padding: 10px;
+    background-color: #f4f9ff;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.form-table{
+    width: 100%;
+    font-family: 'RocknRoll One', sans-serif;
+}
+.form-table td{
+    height: 15px;
+    width: 60%;
+    padding-bottom: 15px;
+    text-align: left;
+    vertical-align: top;
+}
+.form-table .field{
+    width: 20%;
+}
+.form-table td input{
+    border: 0.5px;
+    border-radius: 0.5em;
+    padding: 5px;
+    height: 35px;
+    width: 90%;
+    margin-left: 10%;
+}
+.form-table td select{
+    border: 0.5px;
+    border-radius: 0.5em;
+    padding: 5px;
+    height: 35px;
+    width: 90%;
+    margin-left: 10%;
+}
+.form-table td textarea{
+    border: 0.5px;
+    border-radius: 0.5em;
+    padding: 5px;
+    height: 70px;
+    width: 90%;
+    margin-left: 10%;
+}
+.submitButton{
+    margin: 15px;
+    height: 40px;
+    font-size: 22px;
+    border-radius: 2em;
+    background-color: #327acd;
+    color: white;
+    border: 1px solid white;
+    width: 20%;
+}
+.submitButton:hover{
+    border: 2px solid black;
+}
