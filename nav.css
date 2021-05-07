@@ -115,7 +115,7 @@ nav{
       position: absolute;
       cursor: pointer;
       right: 5%;
-      top:10%;
+      top:8%;
       transform: translate(-5%, -150%);
       z-index: 10;
       transition: all 0.7s ease;
